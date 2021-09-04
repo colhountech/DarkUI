@@ -24,6 +24,6 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Build
-      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG 
+      run: echo dotnet build $SOLUTION --configuration $BUILD_CONFIG 
 
 
