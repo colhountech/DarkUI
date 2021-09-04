@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkUI", "DarkUI\DarkUI.csproj", "{F19472F5-8C44-4C51-A8A0-B9DE5F555255}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkUI", "DarkUI\DarkUI.csproj", "{F19472F5-8C44-4C51-A8A0-B9DE5F555255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{FA334815-6D78-4E9A-9F4D-6C8A58222A57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{FA334815-6D78-4E9A-9F4D-6C8A58222A57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.net4", "Example.net4\Example.net4.csproj", "{C9035F2D-CA7C-4224-946E-457CBD81EB98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{FA334815-6D78-4E9A-9F4D-6C8A58222A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA334815-6D78-4E9A-9F4D-6C8A58222A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA334815-6D78-4E9A-9F4D-6C8A58222A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9035F2D-CA7C-4224-946E-457CBD81EB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9035F2D-CA7C-4224-946E-457CBD81EB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9035F2D-CA7C-4224-946E-457CBD81EB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9035F2D-CA7C-4224-946E-457CBD81EB98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0D81AFE-1758-448F-BBD4-8DE24B38ADC8}
 	EndGlobalSection
 EndGlobal
