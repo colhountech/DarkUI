@@ -1,5 +1,4 @@
 name: CI
-
 on:
   workflow_dispatch: 
   push:
@@ -21,9 +20,5 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Build
-      env:
-        BUILD_CONFIG: 'Release'
-        SOLUTION: 'DarkUI.sln'
-      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG 
-
+      run: dotnet build DarkUI.sln --configuration Release
 
