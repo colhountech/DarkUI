@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net5.0-windows;net4</TargetFrameworks>
+    <TargetFrameworks>net5.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon />
     <StartupObject />
   </PropertyGroup>
+
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageId>DarkUI.Net5</PackageId>
