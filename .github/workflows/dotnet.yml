@@ -10,10 +10,7 @@ on:
     - main
     
 jobs:
-  build:
-    env:
-      BUILD_CONFIG: 'Release'
-      SOLUTION: 'DarkUI.sln'
+  build:   
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
@@ -24,6 +21,9 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Build
-      run: echo dotnet build $SOLUTION --configuration $BUILD_CONFIG 
+      env:
+        BUILD_CONFIG: 'Release'
+        SOLUTION: 'DarkUI.sln'
+      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG 
 
 
