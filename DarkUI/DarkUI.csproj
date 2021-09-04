@@ -7,15 +7,6 @@
     <ApplicationIcon />
     <StartupObject />
   </PropertyGroup>
-  
-  <PropertyGroup>
-    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
-  </PropertyGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net4'">
-    <PackageReference Include="System.Resources.Extensions" />
-  </ItemGroup>
-  
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageId>DarkUI.Net5</PackageId>
