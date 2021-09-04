@@ -11,7 +11,6 @@ on:
     
 jobs:
   build:
-
     env:
       BUILD_CONFIG: 'Release'
       SOLUTION: 'DarkUI.sln'
