@@ -41,6 +41,7 @@ jobs:
         echo SOLUTION: ${{env.SOLUTION}}
         echo BUILD_CONFIG: ${{env.BUILD_CONFIG}}
         echo "branch ${{env.GITHUB_REF}}"
+        echo %PATH%
 
 
     #- name: Build Config
