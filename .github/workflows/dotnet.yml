@@ -37,10 +37,10 @@ jobs:
     - name: Debuging Script
       run: |
         echo Home: $HOME
-        echo GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+        echo GITHUB_REPOSITORY: ${{GITHUB_REPOSITORY}}
         echo SOLUTION: ${{env.SOLUTION}}
         echo BUILD_CONFIG: ${{env.BUILD_CONFIG}}
-        echo "branch $GITHUB_REF"
+        echo "branch ${{env.GITHUB_REF}}"
 
 
     #- name: Build Config
