@@ -22,6 +22,7 @@ jobs:
 
     - name: Restore dependencies
       run: nuget restore ${SOLUTION}
+      run: echo "1: ${SOLUTION}"
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
@@ -31,6 +32,19 @@ jobs:
     - name: Build
       run: dotnet build DarkUI.sln --configuration Release
 
-    - name: Build Config
-      run: dotnet build ${SOLUTION} --configuration ${BUILD_CONFIG} --no-restore
+    - name: Debuging Script
+      run: |
+        echo "Home: ${HOME}"
+        echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
+        echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+        echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+        echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+        echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+        echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
+        echo "GITHUB_SHA: ${GITHUB_SHA}"
+        echo "GITHUB_REF: ${GITHUB_REF}"
+        echo "SOLUTION: ${SOLUTION}"
+        echo "BUILD_CONFIG: ${BUILD_CONFIG}"
 
+    - name: Build Config
+      run: dotnet build "${SOLUTION}" --configuration "${BUILD_CONFIG}" --no-restore
