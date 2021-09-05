@@ -37,7 +37,7 @@ jobs:
     - name: Debuging Script
       run: |
         echo Home: $HOME
-        echo ITHUB_REPOSITORY: {{$GITHUB_REPOSITORY
+        echo ITHUB_REPOSITORY: {{$env.GITHUB_REPOSITORY}}
         echo SOLUTION: {{env.SOLUTION}}
         echo BUILD_CONFIG: {{env.$BUILD_CONFIG}}
 
