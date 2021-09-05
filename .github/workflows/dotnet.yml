@@ -18,28 +18,28 @@ jobs:
 
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    #- uses: actions/checkout@v2
     
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.5
+    #- name: Setup NuGet
+    #  uses: NuGet/setup-nuget@v1.0.5
 
-    - name: Restore dependencies
-      run: nuget restore ${SOLUTION}
+    #- name: Restore dependencies
+    #  run: nuget restore ${SOLUTION}
       
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
+    #- name: Setup .NET
+    #  uses: actions/setup-dotnet@v1
+    #  with:
+    #    dotnet-version: 5.0.x
 
-    - name: Build
-      run: dotnet build DarkUI.sln --configuration Release
+    #- name: Build
+    #  run: dotnet build DarkUI.sln --configuration Release
 
     - name: Debuging Script
       run: |
         echo Home: $HOME
-        echo ITHUB_REPOSITORY: $GITHUB_REPOSITORY
-        echo SOLUTION: $SOLUTION
-        echo BUILD_CONFIG: $BUILD_CONFIG
+        echo ITHUB_REPOSITORY: {{$GITHUB_REPOSITORY
+        echo SOLUTION: {{env.SOLUTION}}
+        echo BUILD_CONFIG: {{env.$BUILD_CONFIG}}
 
-    - name: Build Config
-      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG --no-restore
+    #- name: Build Config
+    #  run: dotnet build $SOLUTION --configuration $BUILD_CONFIG --no-restore
