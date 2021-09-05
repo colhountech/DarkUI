@@ -12,7 +12,7 @@ jobs:
   build:   
     env:
       BUILD_CONFIG: 'Release'
-      SOLUTION: 'MySolution.sln'
+      SOLUTION: 'DarkUI.sln'
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
