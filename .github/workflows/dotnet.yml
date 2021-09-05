@@ -1,4 +1,5 @@
 name: CI
+
 on:
   workflow_dispatch: 
   push:
@@ -9,8 +10,8 @@ on:
     - master
 
 env:
-  BUILD_CONFIG: 'Release'
-  SOLUTION: 'DarkUI.sln'    
+  BUILD_CONFIG: Release
+  SOLUTION: DarkUI.sln    
 
 jobs:
   build:   
