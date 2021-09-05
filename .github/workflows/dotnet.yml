@@ -21,7 +21,7 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.5
 
     - name: Restore dependencies
-      run: nuget restore DarkUI.sln
+      run: nuget restore ${SOLUTION}
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
@@ -32,5 +32,5 @@ jobs:
       run: dotnet build DarkUI.sln --configuration Release
 
     - name: Build Config
-      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG --no-restore
+      run: dotnet build ${SOLUTION} --configuration ${BUILD_CONFIG} --no-restore
 
