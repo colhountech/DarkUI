@@ -38,5 +38,10 @@ jobs:
         echo BUILD_CONFIG: ${{env.BUILD_CONFIG}}
         #dir
 
-    - name: Build Config
+    - name: Build 
       run: dotnet build ${{env.SOLUTION}} --configuration ${{env.BUILD_CONFIG}} --no-restore
+
+    - name: Publish nuget
+      run: dotnet nuget push "DarkUI\bin\Release\*nupkg" -k {GITHUB_TOKEN}  -s "github"
+      env:
+        GITHUB_TOKEN: ${{ secrets.NUGET_PUBLISH }}
