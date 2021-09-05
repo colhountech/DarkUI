@@ -22,7 +22,6 @@ jobs:
 
     - name: Restore dependencies
       run: nuget restore ${SOLUTION}
-      run: echo "1: ${SOLUTION}"
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
