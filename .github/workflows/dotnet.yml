@@ -31,3 +31,6 @@ jobs:
     - name: Build
       run: dotnet build DarkUI.sln --configuration Release
 
+    - name: Build Config
+      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG --no-restore
+
