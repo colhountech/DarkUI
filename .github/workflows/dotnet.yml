@@ -36,7 +36,7 @@ jobs:
         echo Home: $HOME
         echo SOLUTION: ${{env.SOLUTION}}
         echo BUILD_CONFIG: ${{env.BUILD_CONFIG}}
-        dir
+        #dir
 
     - name: Build Config
       run: dotnet build ${{env.SOLUTION}} --configuration ${{env.BUILD_CONFIG}} --no-restore
