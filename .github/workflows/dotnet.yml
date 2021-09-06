@@ -42,5 +42,6 @@ jobs:
         echo SOLUTION: ${{env.SOLUTION}}
         echo BUILD_CONFIG: ${{env.BUILD_CONFIG}}
         echo Version: $VERSION
+        echo GITHUB_REPOSITORY: $GITHUB_REPOSITORY
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${VERSION} --output .
