@@ -12,7 +12,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageId>DarkUI.Net5</PackageId>
     <Authors>Robin Perris, Micheal Colhoun</Authors>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseFile></PackageLicenseFile>
     <PackageProjectUrl>http://www.darkui.com/</PackageProjectUrl>
     <PackageIcon>icon-64.png</PackageIcon>
     <PackageIconUrl>http://www.darkui.com/images/icon-64.pn</PackageIconUrl>      
@@ -21,13 +21,10 @@
     <PackageTags>docking winforms net-winforms docking-library docking-application c-sharp dotnet dotnet-framework visual-studio visual-studio-themes windows windows-desktop windows-forms net5</PackageTags>
     <PackageReleaseNotes>Update DarkUI target frameworks to net5.0-windows;net4</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\icon-64.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
