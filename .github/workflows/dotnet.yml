@@ -31,8 +31,10 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Set VERSION variable from tag
-      run: echo "VERSION=1.0.0" >> $GITHUB_ENV
-
+      #run: echo "VERSION=1.0.0" >> $GITHUB_ENV
+      run: |
+        $version = "1.0.0"
+        echo "VERSION=$version" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
     - name: Build 
       run: dotnet build ${{env.SOLUTION}} --configuration ${{env.BUILD_CONFIG}} --no-restore
 
@@ -44,4 +46,4 @@ jobs:
         echo Version: $ENV:VERSION
         echo GITHUB_REPOSITORY: $ENV:GITHUB_REPOSITORY
     - name: Pack
-      run: dotnet pack --configuration Release /p:Version=${VERSION} --output .
+      run: dotnet pack --configuration Release /p:Version=$ENV:VERSION --output .
