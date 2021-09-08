@@ -12,6 +12,7 @@ on:
 env:
   BUILD_CONFIG: Release
   SOLUTION: DarkUI.sln 
+  PROJECT: DarkUI\DarkUI.csproj
 
 jobs:
   build:   
@@ -42,8 +43,9 @@ jobs:
       run: |
         echo Home: $HOME
         echo SOLUTION: ${{env.SOLUTION}}
+        echo SOLUTION: ${{env.PROJECT}}
         echo BUILD_CONFIG: ${{env.BUILD_CONFIG}}
         echo Version: $ENV:VERSION
         echo GITHUB_REPOSITORY: $ENV:GITHUB_REPOSITORY
     - name: Pack
-      run: dotnet pack --configuration Release /p:Version=$ENV:VERSION --output .
+      run: dotnet pack ${{env.PROJECT}} --configuration Release /p:Version=$ENV:VERSION --output .
