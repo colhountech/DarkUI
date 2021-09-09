@@ -43,7 +43,7 @@ jobs:
       run: |
         echo Home: $HOME
         echo SOLUTION: ${{env.SOLUTION}}
-        echo SOLUTION: ${{env.PROJECT}}
+        echo PROJECT: ${{env.PROJECT}}
         echo BUILD_CONFIG: ${{env.BUILD_CONFIG}}
         echo Version: $ENV:VERSION
         echo GITHUB_REPOSITORY: $ENV:GITHUB_REPOSITORY
